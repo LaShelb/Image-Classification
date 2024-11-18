@@ -3,7 +3,15 @@ import pickle
 import numpy as np
 
 def read_cifar_batch(path_batch: str):
+    """
+    Lit un lot de données CIFAR-10 à partir d'un fichier donné.
 
+    Paramètres :
+        path_batch (str) : Le chemin vers le fichier contenant le lot.
+
+    Retourne :
+        Tuple[np.ndarray, np.ndarray] : Une paire contenant les données du lot sous forme de tableau NumPy et les étiquettes associées.
+    """
     with open(path_batch, 'rb') as f:
 
         batch = pickle.load(f, encoding='bytes')
@@ -18,9 +26,19 @@ def read_cifar_batch(path_batch: str):
     return data, labels
 
 def read_cifar(directory_path: str):
+    """
+    Lit tous les lots de données CIFAR-10 à partir d'un répertoire donné.
+
+    Paramètres :
+        directory_path (str) : Le chemin vers le répertoire contenant les lots.
+
+    Retourne :
+        Tuple[np.ndarray, np.ndarray] : Une paire contenant toutes les données concaténées et leurs étiquettes correspondantes.
+    """
     all_data_list = []
     all_labels_list = []
 
+    # Pour chaque élément on extrait les données et labels
     for filename in os.listdir(directory_path):
         filepath = os.path.join(directory_path, filename)
         data, labels = read_cifar_batch(filepath)
@@ -34,6 +52,17 @@ def read_cifar(directory_path: str):
     return all_data, all_labels
 
 def split_dataset(data, labels, split: int ):
+    """
+    Divise les données et les labels en ensembles de training et de test.
+
+    Paramètres :
+        data (np.ndarray) : Les données à diviser.
+        labels (np.ndarray) : Les labels associées.
+        split (int) : Le pourcentage de données à allouer à l'ensemble de training.
+
+    Retourne :
+        Tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray] : Les données et labels de training et de test.
+    """
 
     n_samples = data.shape[0]
     

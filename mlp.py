@@ -86,9 +86,9 @@ def learn_once_cross_entropy(w1, b1, w2, b2, data, labels_train, learning_rate):
     Retourne :
         Tuple : Poids et biais mis à jour ainsi que la valeur de la loss.
     """
-    # Hyperparameters
+
     batch_size, d_in = data.shape
-    d_out = w2.shape[1]  # Output dimension
+    d_out = w2.shape[1]  
 
     # Forward pass
     a0 = data  # the data are the input of the first layer

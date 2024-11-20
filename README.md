@@ -13,7 +13,7 @@ Le fichier read_cifar.py s'occupe de traiter les données d'entrée. Les fichier
 1. **Cloner le dépôt :**
 
 ```bash
-git clone https://gitlab.ec-lyon.fr/<user>/
+git clone https://gitlab.ec-lyon.fr/sramos/image-classification.git
 ```
 
 2. **Installer les dépendances :**

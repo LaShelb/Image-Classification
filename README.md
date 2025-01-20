@@ -48,8 +48,8 @@ You can find more information about the dataset and download it from the [offici
 ├── knn.py                 # k-NN-based classification
 ├── read_cifar.py          # Utility script for reading/preprocessing CIFAR-10
 ├── results/
-│   ├── knn_results.txt    # Example output/results for k-NN
-│   └── mlp_results.txt    # Example output/results for MLP
+│   ├── knn_results.png    # Example output/results for k-NN
+│   └── mlp_results.png    # Example output/results for MLP
 ├── requirements.txt       # List of dependencies (optional)
 └── README.md              # Project documentation
 ```

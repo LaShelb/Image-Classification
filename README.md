@@ -114,4 +114,4 @@ You can adjust hyperparameters (e.g., the number of neighbors in k-NN, or the nu
 
 ## Contact
 
-For any questions or collaborations, feel free to reach out via LinkedIn.
+For any questions or collaborations, feel free to reach out via [LinkedIn](www.linkedin.com/in/simon-ramos-190064234).
